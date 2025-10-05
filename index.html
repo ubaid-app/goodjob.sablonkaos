@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goodjob Screenprinting – Ahli Sablon Kaos Berkualitas Tinggi</title>
+  <meta name="description" content="Goodjob Screenprinting di Kediri. Jasa sablon kaos sublim, plastisol, raber, DTF, seragam, dan custom. Kualitas tinggi, harga bersaing, tepat waktu." />
+  
+  <!-- 
+    ==================================================================
+    PENGATURAN LOGO TAB BROWSER (FAVICON)
+    Ganti href="..." dengan path ke file logo Anda, contoh: "images/favicon.png"
+    ==================================================================
+  -->
+  <link rel="icon" href="images/logo1x1.jpeg" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo1x1.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg-soft:#121212;
+      --text:#f6f7f9;
+      --muted:#b7b9c0;
+      --neon:#39ff14;
+      --gold:#ffd166;
+      --card:#0f0f0f;
+      --border:#1f1f1f;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:20px;
+      --radius-sm:14px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);}
+    body.nav-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img, svg{max-width:100%;display:block}
+    .container{width:min(1200px,92%);margin-inline:auto}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
+    .nav-container{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-img{height: 42px; width: auto; max-width: 160px;} 
+    .brand-title{display: none;}
+    .main-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .main-nav a{padding:8px 12px;border-radius:10px;opacity:.9;transition:background .2s, opacity .2s}
+    .main-nav a:hover{background:var(--bg-soft);opacity:1}
+    .cta{background:var(--neon);color:#0b0b0b;font-weight:800;padding:10px 16px;border-radius:999px;box-shadow:0 0 14px rgba(57,255,20,.45);display:inline-flex;align-items:center;gap:8px;transition:transform .2s, box-shadow .2s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(57,255,20,.55)}
+
+    /* Hamburger Menu Button */
+    .menu-toggle{display:none;background:none;border:none;padding:8px;cursor:pointer;z-index:100}
+    .menu-toggle .icon-bar{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:transform .3s ease, opacity .3s ease}
+    .menu-toggle .icon-bar:nth-child(2){margin:6px 0}
+    .nav-open .menu-toggle .icon-bar:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .nav-open .menu-toggle .icon-bar:nth-child(2){opacity:0}
+    .nav-open .menu-toggle .icon-bar:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    
+    /* Hero */
+    .hero{position:relative;padding:72px 0 56px;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:-30%;background:radial-gradient(600px 320px at 20% -10%,rgba(57,255,20,.12),transparent),radial-gradient(500px 240px at 80% 0,rgba(255,209,102,.12),transparent); z-index: -1;}    
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);background:rgba(255,255,255,.02)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(2.1rem, 5vw, 3rem);line-height:1.1;margin:14px 0}
+    .hero p{color:var(--muted);font-size:clamp(1rem, 2.5vw, 1.125rem);max-width:60ch}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .ghost{border:1px solid var(--border);padding:10px 16px;border-radius:999px;color:var(--text);transition:background .2s, border-color .2s}
+    .ghost:hover{background:var(--border); border-color:var(--neon)}
+    .product-gallery{background:linear-gradient(180deg,#0d0d0d,#0a0a0a);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .product-grid img {aspect-ratio: 1/1; width: 100%; object-fit: cover; border-radius: 14px; border: 1px solid var(--border);}
+
+    /* Sections */
+    section{padding:64px 0}
+    .section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px;margin-bottom:28px}
+    .section-head h2{font-size:clamp(1.75rem, 3.2vw, 2.25rem);margin:0}
+    .section-sub{color:var(--muted);max-width:55ch}
+
+    /* Cards & grids */
+    .grid{display:grid;gap:20px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow)}
+    .pill{display:inline-block;border:1px solid var(--border);padding:6px 12px;border-radius:999px;color:var(--muted);font-size:12px}
+
+    /* Specific components */
+    .service-card{display:flex;gap:16px;align-items:flex-start}
+    .service-card .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(57,255,20,.12);color:var(--neon);flex:none;font-weight:800}
+    .adv-card .icon{background:rgba(255,209,102,.14);color:var(--gold)}
+    .stars{color:var(--gold)}
+    .portfolio .tile{aspect-ratio:1.2;border-radius:14px;background:linear-gradient(135deg,#111,#0a0a0a);border:1px solid var(--border);position:relative;overflow:hidden; object-fit: cover;}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--border);overflow:hidden;border-radius:14px}
+    th,td{border-bottom:1px solid var(--border);padding:12px;text-align:center}
+    th{background:#111}
+
+    /* Testimonial Card */
+    .testimonial-card {display:flex; flex-direction:column; gap:14px;}
+    .testimonial-header {display:flex; align-items:center; gap:12px;}
+    .testimonial-avatar {width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid var(--border);}
+    .testimonial-name {font-weight:600; margin:0;}
+    .testimonial-body {color:var(--muted); font-style:italic; border-left:3px solid var(--border); padding-left:14px; margin:0;}
+    .google-reviews-link {text-align:center; margin-top:24px;}
+
+    /* Price Section */
+    .tabs-container {display:flex; flex-wrap:wrap; border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom: 20px;}
+    .tab-button {flex-grow: 1; padding: 12px 16px; background: none; border:none; color: var(--muted); cursor:pointer; font-family: inherit; font-size: 1rem; text-align: center; border-bottom: 2px solid transparent; transition: all .2s;}
+    .tab-button.active {color: var(--text); background: var(--border); border-bottom-color: var(--neon);}
+    .tab-content {display: none; animation: fadeIn .4s;}
+    .tab-content.active {display: block;}
+    @keyframes fadeIn {from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: translateY(0);}}
+    .price-card h3 {margin-top:0;}
+    .price-card .price {font-size: 2rem; font-weight: 800; color: var(--neon); margin-bottom: 8px;}
+    .price-card .price small {font-size: 1rem; color: var(--muted);}
+    .addons-list {list-style: none; padding: 0; margin: 20px 0 0 0;}
+    .addons-list li {padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between;}
+    .addons-list li:last-child {border-bottom: none;}
+
+
+    /* Form Elements */
+    .order-form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .field{display:flex;flex-direction:column;gap:8px}
+    .field-full{grid-column:1/-1}
+    input,select,textarea{background:#0e0e0e;border:1px solid var(--border);border-radius:12px;color:var(--text);padding:12px;font-family:inherit;font-size:1rem;transition:border-color .2s, box-shadow .2s}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--neon);box-shadow:0 0 8px rgba(57,255,20,.3)}
+    textarea{min-height:110px;resize:vertical}
+    .submit{background:linear-gradient(90deg,var(--neon),#b7ffa7);color:#072407;font-weight:800;border:none;border-radius:14px;padding:14px 16px;cursor:pointer;box-shadow:0 0 16px rgba(57,255,20,.35);transition:transform .2s, box-shadow .2s}
+    .submit:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(57,255,20,.55)}
+
+    /* Footer */
+    footer{padding:32px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+    /* Animations */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .7s cubic-bezier(0.25, 1, 0.5, 1)}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr; text-align:center; gap: 40px;}
+      .hero-grid .btns{justify-content:center}
+      .hero p{margin-inline:auto}
+      .grid-4, .grid-2{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 768px){
+      .menu-toggle{display:block}
+      .main-nav{
+        position:fixed; inset:0; background:rgba(11,11,11,.95); backdrop-filter:blur(10px);
+        display:flex; justify-content:center; align-items:center;
+        opacity:0; visibility:hidden; transition:opacity .4s ease, visibility .4s ease;
+      }
+      .nav-open .main-nav{opacity:1; visibility:visible}
+      .main-nav ul{flex-direction:column; text-align:center; font-size:1.5rem; gap:24px}
+
+      .grid-3, .grid-2{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:1fr}
+      .order-form{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="brand" aria-label="Goodjob Screenprinting beranda">
+        <!-- 
+          ==========================================
+          UBAH LOGO UTAMA DI SINI
+          Ganti src="..." dengan path ke file logo Anda, contoh: "images/logo-panjang.png"
+          ==========================================
+        -->
+        <img src="images/logo-goodjob.png" alt="Logo Goodjob Screenprinting" class="logo-img">
+        <div class="brand-title">Goodjob Screenprinting</div>
+      </a>
+      
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li><a href="#harga">Harga</a></li>
+          <li><a href="#porto">Portofolio</a></li>
+          <li><a href="#ukuran">Pesan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" id="menuToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-grid">
+        <div>
+          <span class="badge">#SablonKualitasTinggi</span>
+          <h1>Ahli Sablon Kaos <span style="background:linear-gradient(90deg,var(--neon),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent">Berkualitas Tinggi</span></h1>
+          <p>Kami melayani berbagai jenis sablon kaos premium: Sublim, Plastisol, Raber, DTF, hingga pembuatan Seragam dan Jasa Desain. Berbasis di Kediri, siap kirim ke seluruh Indonesia.</p>
+          <div class="btns">
+            <a class="cta" id="ctaHero" href="https://wa.me/6285895756490?text=Halo%20Goodjob%2C%20saya%20ingin%20konsultasi%20sablon%20kaos." target="_blank" rel="noopener">Mulai Chat WhatsApp</a>
+            <a class="ghost" href="#porto">Lihat Portofolio</a>
+          </div>
+        </div>
+        <div class="product-gallery" aria-label="Galeri produk">
+          <div class="product-grid">
+            <!-- 
+              ==================================================================
+              UBAH GAMBAR-GAMBAR PRODUK UNGGULAN DI SINI (6 GAMBAR)
+              Ganti src="..." pada setiap tag <img> dengan path ke gambar produk Anda.
+              Contoh: "images/produk-1.jpg"
+              ==================================================================
+            -->
+            <img src="images/kaos1.png" alt="Contoh Produk Sablon 1">
+            <img src="images/kaos2.png" alt="Contoh Produk Sablon 2">
+            <img src="images/kaos6.JPG" alt="Contoh Produk Sablon 3">
+            <img src="images/kaos4.JPG" alt="Contoh Produk Sablon 4">
+            <img src="images/kaos5.png" alt="Contoh Produk Sablon 5">
+            <img src="images/kaos3.png" alt="Contoh Produk Sablon 6">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="container reveal">
+      <div class="section-head">
+        <div>
+          <h2>Tentang Kami</h2>
+          <p class="section-sub">Studio sablon kaos profesional di Kediri dengan fokus pada kualitas cetak, bahan pilihan, dan ketepatan waktu.</p>
+        </div>
+        <span class="pill">Berpengalaman Sejak 2015</span>
+      </div>
+      <div class="card">
+        <p>Kami adalah tim berpengalaman yang siap menangani pesanan <em>merchandise</em> brand, seragam komunitas/instansi, hingga pakaian olahraga dengan standar kualitas tertinggi.</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="container reveal">
+      <div class="section-head">
+        <h2>Layanan & Produk</h2>
+        <p class="section-sub">Pilih metode sablon yang paling sesuai dengan kebutuhan, desain, dan budget proyek Anda.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card service-card">
+          <div class="icon">SBL</div>
+          <div>
+            <h3>Sablon Sublim</h3>
+            <p class="section-sub">Cetak full-color cerah yang menyatu dengan kain polyester.</p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="icon">PL</div>
+          <div>
+            <h3>Sablon Plastisol</h3>
+            <p class="section-sub">Hasil tebal, detail tajam, dan warna pekat. Standar distro.</p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="icon">R</div>
+          <div>
+            <h3>Sablon Raber</h3>
+            <p class="section-sub">Tinta karet elastis yang awet dan cocok untuk berbagai jenis kain.</p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="icon">DTF</div>
+          <div>
+            <h3>DTF</h3>
+            <p class="section-sub">Direct to Film untuk hasil cetak full-color yang tajam dan fleksibel.</p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="icon">S</div>
+          <div>
+            <h3>Seragam</h3>
+            <p class="section-sub">Produksi seragam berkualitas untuk komunitas, instansi, dan acara.</p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="icon">D</div>
+          <div>
+            <h3>Jasa Desain</h3>
+            <p class="section-sub">Butuh bantuan desain? Tim kami siap membantu visualisasikan ide Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="keunggulan" class="container reveal">
+      <div class="section-head">
+        <h2>Keunggulan</h2>
+        <p class="section-sub">Alasan pelanggan memilih Goodjob.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card service-card adv-card">
+          <div class="icon">✔</div>
+          <div>
+            <h3>Kualitas Tinggi</h3>
+            <p class="section-sub">Bahan & tinta premium, QC berlapis.</p>
+          </div>
+        </div>
+        <div class="card service-card adv-card">
+          <div class="icon">💸</div>
+          <div>
+            <h3>Harga Bersaing</h3>
+            <p class="section-sub">Paket sesuai budget tanpa kompromi kualitas.</p>
+          </div>
+        </div>
+        <div class="card service-card adv-card">
+          <div class="icon">🎨</div>
+          <div>
+            <h3>Layanan Custom</h3>
+            <p class="section-sub">Bebas request model, warna, & finishing.</p>
+          </div>
+        </div>
+        <div class="card service-card adv-card">
+          <div class="icon">⏱</div>
+          <div>
+            <h3>Tepat Waktu</h3>
+            <p class="section-sub">Timeline jelas & komitmen deadline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Section -->
+    <section id="harga" class="container reveal">
+      <div class="section-head">
+        <h2>Daftar Harga</h2>
+        <p class="section-sub">Pricelist transparan untuk berbagai produk andalan kami. Hubungi kami untuk custom order dan penawaran spesial.</p>
+      </div>
+
+      <!-- Tabs untuk Kategori Produk -->
+      <div class="tabs-container">
+        <button class="tab-button active" onclick="openTab(event, 'hargaKatun')">Kaos Katun</button>
+        <button class="tab-button" onclick="openTab(event, 'hargaJersey')">Jersey</button>
+        <button class="tab-button" onclick="openTab(event, 'hargaPolyester')">Kaos Polyester</button>
+        <button class="tab-button" onclick="openTab(event, 'hargaLain')">Lain-lain</button>
+      </div>
+
+      <!-- KONTEN TAB: KAOS KATUN -->
+      <div id="hargaKatun" class="tab-content active">
+        <div class="grid grid-2">
+          <div class="card price-card">
+            <h3>Lusinan</h3>
+            <div class="price">Rp 65.000 <small>/pcs</small></div>
+            <p class="section-sub">Harga mulai untuk ukuran S, M, L, XL.</p>
+          </div>
+          <div class="card price-card">
+            <h3>Bijian</h3>
+            <div class="price">Rp 75.000 <small>/pcs</small></div>
+            <p class="section-sub">Harga mulai untuk ukuran S, M, L, XL.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:20px;">
+          <h4>Tambahan Biaya (Add-ons)</h4>
+          <ul class="addons-list">
+            <li><span>Di atas Ukr. XL</span> <span>+Rp 5.000 /size</span></li>
+            <li><span>Lengan Panjang</span> <span>+Rp 5.000</span></li>
+            <li><span>Rib Lengan</span> <span>+Rp 3.000</span></li>
+            <li><span>Kupluk (Hoodie)</span> <span>+Rp 7.000</span></li>
+          </ul>
+        </div>
+        <small class="section-sub" style="font-size: 12px; margin-top: 16px; display: block;">*Harga dapat berubah tergantung kerumitan, ukuran gambar, dan banyaknya warna pada desain.</small>
+      </div>
+
+      <!-- KONTEN TAB: JERSEY -->
+      <div id="hargaJersey" class="tab-content">
+        <div class="card" style="overflow-x:auto;">
+          <h4>Harga Jersey (Full Printing)</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Lusinan (per pcs)</th>
+                <th>Bijian (per pcs)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Kaos (Full Printing)</td><td>Rp 95.000</td><td>Rp 120.000</td></tr>
+              <tr><td>Celana (Polos)</td><td>Rp 45.000</td><td>Rp 45.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card" style="margin-top:20px;">
+          <h4>Tambahan Biaya (Add-ons)</h4>
+          <ul class="addons-list">
+            <li><span>Di atas Ukr. XL</span> <span>+Rp 10.000 /size</span></li>
+            <li><span>Lengan Panjang</span> <span>+Rp 10.000</span></li>
+            <li><span>Rib Lengan</span> <span>+Rp 5.000</span></li>
+            <li><span>Kupluk (Hoodie)</span> <span>+Rp 10.000</span></li>
+          </ul>
+        </div>
+        <small class="section-sub" style="font-size: 12px; margin-top: 16px; display: block;">*Harga dapat berubah tergantung penambahan atau pengurangan posisi printing.</small>
+      </div>
+
+      <!-- KONTEN TAB: KAOS POLYESTER -->
+      <div id="hargaPolyester" class="tab-content">
+        <div class="grid grid-2">
+          <div class="card price-card">
+            <h3>Lusinan</h3>
+            <div class="price">Rp 35.000 <small>/pcs</small></div>
+            <p class="section-sub">Harga mulai untuk ukuran S, M, L, XL.</p>
+          </div>
+          <div class="card price-card">
+            <h3>Bijian</h3>
+            <div class="price">Rp 45.000 <small>/pcs</small></div>
+            <p class="section-sub">Harga mulai untuk ukuran S, M, L, XL.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:20px;">
+          <h4>Tambahan Biaya (Add-ons)</h4>
+          <ul class="addons-list">
+            <li><span>Di atas Ukr. XL</span> <span>+Rp 3.000 /size</span></li>
+            <li><span>Lengan Panjang</span> <span>+Rp 3.000</span></li>
+            <li><span>Rib Lengan</span> <span>+Rp 2.000</span></li>
+            <li><span>Kupluk (Hoodie)</span> <span>+Rp 7.000</span></li>
+          </ul>
+        </div>
+        <small class="section-sub" style="font-size: 12px; margin-top: 16px; display: block;">*Harga dapat berubah tergantung kerumitan, ukuran gambar, dan banyaknya warna pada desain.</small>
+      </div>
+
+      <!-- KONTEN TAB: LAIN-LAIN -->
+      <div id="hargaLain" class="tab-content">
+        <div class="grid grid-2">
+          <div class="card price-card">
+            <h3>Bendera Sublim</h3>
+            <ul class="addons-list">
+              <li><span>Bahan Satin Premium</span> <span>Rp 75.000 /m²</span></li>
+              <li><span>Bahan Katun</span> <span>Rp 65.000 /m²</span></li>
+              <li><span>Bahan Jaring</span> <span>Rp 60.000 /m²</span></li>
+            </ul>
+             <small class="section-sub" style="font-size: 12px; margin-top: 16px; display: block;">*Untuk ukuran di bawah 1,5 x 1,5 m.</small>
+          </div>
+          <div class="card price-card">
+            <h3>Stiker</h3>
+            <ul class="addons-list">
+              <li><span>Biasa (Area A3)</span> <span>Rp 15.000</span></li>
+              <li><span>Sedang (Area A3)</span> <span>Rp 20.000</span></li>
+              <li><span>Bagus (Area 1x1m)</span> <span>Rp 100.000</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Portfolio & Testimonials Section -->
+    <section id="porto" class="container reveal">
+      <div class="section-head">
+        <h2>Apa Kata Pelanggan Kami</h2>
+        <p class="section-sub">Ulasan asli dari pelanggan kami di Google Maps.</p>
+      </div>
+      <div class="grid grid-3" style="margin-bottom:20px">
+
+        <!-- 
+          ==================================================================
+          UBAH TESTIMONI PELANGGAN DI SINI (KARTU 1)
+          1. Ganti src="..." pada <img> dengan path foto avatar, contoh: "images/avatar1.png"
+          2. Ganti nama pelanggan di dalam <h4>.
+          3. Ganti teks testimoni di dalam <p>.
+          ==================================================================
+        -->
+        <div class="card testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/100x100/39ff14/0b0b0b?text=A" alt="Avatar Pelanggan" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Andi Setiawan</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-body">"Pelayanannya ramah banget, pengerjaan juga cepat dan hasilnya rapi. Sablonnya detail dan warnanya pekat. Sangat direkomendasikan!"</p>
+        </div>
+
+        <!-- UBAH TESTIMONI PELANGGAN (KARTU 2) -->
+        <div class="card testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/100x100/ffd166/0b0b0b?text=S" alt="Avatar Pelanggan" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Sari Lestari</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-body">"Tempat sablon andalan buat merchandise komunitas. Kualitasnya juara, harganya juga masih masuk akal. Owner-nya asik buat diajak diskusi desain."</p>
+        </div>
+        
+        <!-- UBAH TESTIMONI PELANGGAN (KARTU 3) -->
+        <div class="card testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/100x100/b7b9c0/0b0b0b?text=D" alt="Avatar Pelanggan" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Dwi P.</h4>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-body">"Hasil sablon DTF di sini bagus banget, warnanya keluar dan awet. Sudah beberapa kali cuci masih aman. Mantap!"</p>
+        </div>
+      </div>
+      <div class="google-reviews-link">
+        <a href="https://maps.app.goo.gl/i8TZL6i6HtC2Bp6PA" class="ghost" target="_blank" rel="noopener">Lihat Semua Review di Google Maps →</a>
+      </div>
+      
+      <div class="section-head" style="margin-top: 64px;">
+        <h2>Portofolio Hasil Produksi</h2>
+      </div>
+      <div class="grid grid-3 portfolio">
+        <!-- 
+          ==================================================================
+          MASUKKAN PORTOFOLIO DI SINI
+          Ganti setiap placeholder di bawah dengan tag <img> asli.
+          Contoh: <img src="images/porto1.jpg" alt="Deskripsi gambar" class="tile">
+          ==================================================================
+        -->
+        <img src="images/kaos1.png" alt="Contoh hasil produksi sablon 1" class="tile">
+        <img src="images/kaos2.png" alt="Contoh hasil produksi sablon 2" class="tile">
+        <img src="images/kaos6.JPG" alt="Contoh hasil produksi sablon 3" class="tile">
+        <img src="images/kaos4.JPG" alt="Contoh hasil produksi sablon 4" class="tile">
+        <img src="images/kaos5.png" alt="Contoh hasil produksi sablon 5" class="tile">
+        <img src="images/kaos3.png" alt="Contoh hasil produksi sablon 6" class="tile">
+      </div>
+    </section>
+    
+    <!-- Size & Order Section -->
+    <section id="ukuran" class="container reveal">
+      <div class="section-head">
+        <h2>Bagan Ukuran & Pemesanan</h2>
+        <p class="section-sub">Pastikan ukuran kaos sudah sesuai, lalu isi form di bawah untuk memulai pemesanan via WhatsApp.</p>
+      </div>
+      <div class="card" style="margin-bottom:20px;overflow-x:auto">
+        <table aria-label="Tabel ukuran kaos">
+          <thead>
+            <tr>
+              <th>Ukuran</th>
+              <th>Lebar (cm)</th>
+              <th>Panjang (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>XS</td><td>44</td><td>60</td></tr>
+            <tr><td>S</td><td>46</td><td>63</td></tr>
+            <tr><td>M</td><td>48</td><td>68</td></tr>
+            <tr><td>L</td><td>50</td><td>69</td></tr>
+            <tr><td>XL</td><td>52</td><td>72</td></tr>
+            <tr><td>XXL</td><td>54</td><td>75</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <form class="card order-form" id="orderForm" aria-label="Form pemesanan cepat">
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input id="nama" name="nama" placeholder="Nama lengkap" required />
+        </div>
+        <div class="field">
+          <label for="kontak">Kontak (WhatsApp)</label>
+          <input id="kontak" name="kontak" placeholder="08xxxxxxxxxx" required />
+        </div>
+        <div class="field">
+          <label for="metode">Jenis Layanan</label>
+          <select id="metode" name="metode" required>
+            <option value="Sublim">Sablon Sublim</option>
+            <option value="Plastisol">Sablon Plastisol</option>
+            <option value="Raber">Sablon Raber</option>
+            <option value="DTF">DTF</option>
+            <option value="Seragam">Seragam</option>
+            <option value="Desain">Jasa Desain</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ukuranBaju">Ukuran</label>
+          <select id="ukuranBaju" name="ukuran">
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="detail">Detail Pesanan</label>
+          <textarea id="detail" name="detail" placeholder="Jumlah, warna kaos, area cetak, link desain (jika ada)"></textarea>
+        </div>
+        <div class="field-full" style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="submit" type="submit">Kirim ke WhatsApp</button>
+          <a class="ghost" href="#keunggulan">Kenapa Goodjob?</a>
+        </div>
+        <small class="section-sub field-full" style="font-size:12px">Dengan mengirim formulir ini, Anda akan diarahkan ke WhatsApp. Tidak ada data yang disimpan di website.</small>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="container reveal">
+      <div class="section-head">
+        <h2>Kontak & Lokasi</h2>
+        <p class="section-sub">Kunjungi workshop kami atau hubungi kami secara online.</p>
+      </div>
+      <div class="grid contact-grid">
+        <div class="card">
+          <h3>Informasi Kontak</h3>
+          <address style="font-style:normal">
+            Goodjob Screenprinting<br>
+            Dsn. Mukuh Ds, Tawangrejo, Mukuh, Kec. Kayen Kidul, Kabupaten Kediri, Jawa Timur 64183<br>
+            Buka: Senin–Sabtu, 09.00–17.00 WIB
+          </address>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+            <a class="cta" href="https://wa.me/6285895756490" target="_blank" rel="noopener">Chat WhatsApp</a>
+            <a class="ghost" href="https://www.instagram.com/goodjob.sp/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Lokasi di Peta</h3>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.793540439818!2d112.10724187489556!3d-7.81156699220973!2m3!1f0!2f0!3f0!3m2!1i1024!i768!4f13.1!3m3!1m2!1s0x2e7859b0f9f1b999%3A0x63a9f0a202e82f3c!2s64W5%2BFW%20Mukuh%2C%20Kabupaten%20Kediri%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1726764593258!5m2!1sid!2sid"
+            width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Goodjob Screenprinting di Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Goodjob Screenprinting. All rights reserved.</span>
+      <a href="#" style="color:var(--muted)">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Animasi on-scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    },{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      document.body.classList.toggle('nav-open');
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      menuToggle.setAttribute('aria-label', isExpanded ? 'Buka navigasi' : 'Tutup navigasi');
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Buka navigasi');
+      });
+    });
+
+    // Fungsi untuk Tabs
+    function openTab(evt, tabName) {
+      let i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
+      }
+      tablinks = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.className += " active";
+    }
+    // Set default tab on page load
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelector('.tab-button').click();
+    });
+
+
+    // Form -> WhatsApp
+    const WA_NUMBER = '6285895756490';
+    const orderForm = document.getElementById('orderForm');
+    if(orderForm){
+      orderForm.addEventListener('submit', function(ev){
+        ev.preventDefault();
+        const data = Object.fromEntries(new FormData(this).entries());
+        const msg = `Halo Goodjob, saya ${data.nama}.%0A`+
+                    `Kontak: ${data.kontak}%0A`+
+                    `Jenis sablon: ${data.metode}%0A`+
+                    `Ukuran: ${data.ukuran ?? '-'}%0A`+
+                    `Detail: ${encodeURIComponent(data.detail || '-')}`;
+        const waUrl = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+        window.open(waUrl, '_blank');
+      });
+    }
+  </script>
+</body>
+</html>
+
